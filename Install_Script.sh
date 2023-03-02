@@ -13,7 +13,7 @@ echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.
 echo 'proot-distro login ubuntu --shared-tmp --no-sysvipc' >> ~/.bashrc &&
 source ~/.bashrc
 
-# Install xfce 
+# Install awesome 
 
 wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Proot-Distro.sh &&
 chmod +x Proot-Distro.sh &&
