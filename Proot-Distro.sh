@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt update && apt upgrade -y
-apt-get install sudo nano wget dbus-x11 awesome tigervnc-standalone-server -y
+apt-get install sudo nano wget xterm dbus-x11 awesome tigervnc-standalone-server -y
 
 apt clean && apt autoremove -y
 
