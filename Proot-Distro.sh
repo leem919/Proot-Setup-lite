@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt update && apt upgrade -y
-apt-get install sudo nano wget xterm dbus-x11 tigervnc-standalone-server -y
+apt-get install sudo nano wget xterm dbus-x11 tigervnc-standalone-server libfreetype-dev libfreetype6-dev:armhf -y
 
 apt clean && apt autoremove -y
 
