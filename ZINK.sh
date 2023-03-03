@@ -1,6 +1,4 @@
-echo "deb-src [signed-by="/usr/share/keyrings/debian-archive-keyring.gpg"] http://deb.debian.org/debian bullseye main contrib" >> /etc/apt/sources.list
-echo "deb-src [signed-by="/usr/share/keyrings/debian-archive-keyring.gpg"] http://deb.debian.org/debian bullseye-updates main contrib" >> /etc/apt/sources.list
-echo "deb-src [signed-by="/usr/share/keyrings/debian-archive-keyring.gpg"] http://security.debian.org/debian-security bullseye-security main contrib" >> /etc/apt/sources.list
+echo "deb-src [signed-by="/usr/share/keyrings/ubuntu-archive-keyring.gpg"] http://ports.ubuntu.com/ubuntu-ports jammy main universe multiverse" >> /etc/apt/sources.list
 apt update -y
 apt build-dep mesa -y
 cd ~
