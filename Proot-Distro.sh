@@ -16,6 +16,7 @@ echo 'vncserver -kill :1' > /usr/local/bin/vnc-stop
 
 echo 'box64 wine64 explorer /desktop=wine,960x540 explorer' > /usr/local/bin/wine-desktop
 
+chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vnc-start
 chmod +x /usr/local/bin/vnc-stop
 chmod +x /usr/local/bin/wine-desktop
