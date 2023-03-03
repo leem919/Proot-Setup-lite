@@ -1,9 +1,14 @@
 #!/bin/bash
 
 apt update && apt upgrade -y
-apt-get install sudo nano wget xterm dbus-x11 awesome tigervnc-standalone-server -y
+apt-get install sudo nano wget xterm dbus-x11 tigervnc-standalone-server -y
 
 apt clean && apt autoremove -y
+
+mkdir ~/.vnc
+echo '#!/bin/bash
+xrdb $HOME/.Xresources
+xterm' > ~/.vnc/xstartup
 
 echo 'vncserver -name remote-desktop -geometry 960x540 -localhost no :1' > /usr/local/bin/vnc-start
 
