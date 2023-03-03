@@ -50,7 +50,7 @@ sudo apt update && sudo apt install box64 -y
 cd
 mkdir ~/wine
 cd ~/wine
-wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.0-6-proton/wine-7.0-6-proton-amd64.tar.xz
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/6.23/wine-6.23-amd64.tar.xz
 tar -xvf *.tar.xz
 mv ~/wine/wine*/* ~/wine
 rm -rf wine*
