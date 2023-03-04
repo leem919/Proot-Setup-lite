@@ -24,10 +24,4 @@ chmod +x Proot-Distro.sh &&
 wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box86-64_Wine86-64.sh && 
 chmod +x Box86-64_Wine86-64.sh && 
 ./Box86-64_Wine86-64.sh
-
-
-# Kernel32.dll fix
-
-wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Kernel32.dll-fix.sh &&
-chmod +x Kernel32.dll-fix.sh &&
-./Kernel32.dll-fix.sh
+echo "Run vnc-start to open the vnc server, and vnc-stop to close it."
