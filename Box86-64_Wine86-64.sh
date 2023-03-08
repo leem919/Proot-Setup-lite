@@ -50,7 +50,7 @@ sudo apt update && sudo apt install box64 -y
 cd
 mkdir ~/wine
 cd ~/wine
-wget https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-amd64.tar.xz
 tar -xvf *.tar.xz
 mv ~/wine/wine*/* ~/wine
 rm -rf wine*
@@ -60,5 +60,13 @@ cd
 sudo ln -s ~/wine/bin/wine /usr/local/bin/wine
 sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
 sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64
+
+#Install kernel32.dll fix
+cd
+rm -rf ~/.wine
+rm -rf ~/wine-8.0.tar.xz
+wget https://github.com/ThieuMinh26/Proot-Setup/releases/download/1.0.0/wine-8.0.tar.xz
+tar -xf wine-8.0.tar.xz
+echo 'alias gst="WINEDLLOVERRIDES=\"winegstreamer=\""' >> ~/.bashrc
 
 clear
