@@ -1,4 +1,4 @@
-pkg install x11-repo clang lld binutils cmake autoconf automake libtool ndk-sysroot ndk-multilib make python git libandroid-shmem-static vulkan-tools vulkan-loader vulkan-extension-layer ninja llvm bison flex libx11 xorgproto libdrm libpixman libxfixes libjpeg-turbo xtrans libxxf86vm xorg-xrandr xorg-font-util xorg-util-macros libxfont2 libxkbfile libpciaccess xcb-util-renderutil xcb-util-image xcb-util-keysyms xcb-util-wm xorg-xkbcomp xkeyboard-config libxdamage libxinerama
+pkg install x11-repo clang lld binutils cmake autoconf automake libtool ndk-sysroot ndk-multilib make python git libandroid-shmem-static vulkan-tools vulkan-loader vulkan-loader-android vulkan-extension-layer ninja llvm bison flex libx11 xorgproto libdrm libpixman libxfixes libjpeg-turbo xtrans libxxf86vm xorg-xrandr xorg-font-util xorg-util-macros libxfont2 libxkbfile libpciaccess xcb-util-renderutil xcb-util-image xcb-util-keysyms xcb-util-wm xorg-xkbcomp xkeyboard-config libxdamage libxinerama
 curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/virglrenderer-android_0.10.4.deb -O
 dpkg -i virglrenderer-android_0.10.4.deb
 rm virglrenderer-android_0.10.4.deb
