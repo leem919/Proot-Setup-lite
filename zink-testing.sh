@@ -4,7 +4,7 @@ pip install meson mako;
 mkdir ~/tmp;
 cd ~/tmp;
 LD_PRELOAD='' git clone --depth 1 -b libxshmfence-1.3 https://gitlab.freedesktop.org/xorg/lib/libxshmfence.git;
-git clone https://github.com/Heasterian/mesa-turnip-kgsl
+LD_PRELOAD='' git clone --depth 1 -b mesa-22.0.5 https://gitlab.freedesktop.org/mesa/mesa.git;
 LD_PRELOAD='' git clone --depth 1 -b 1.5.10 https://github.com/anholt/libepoxy.git;
 curl https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/0.10.4/virglrenderer-0.10.4.zip -O
 unzip virglrenderer-0.10.4.zip
@@ -14,7 +14,7 @@ cd ~/tmp/libxshmfence;
 ./autogen.sh --prefix=$PREFIX --with-shared-memory-dir=$TMPDIR;
 sed -i s/values.h/limits.h/ ./src/xshmfence_futex.h;
 make -j8 install CPPFLAGS=-DMAXINT=INT_MAX;
-cd ~/tmp/mesa-turnip-kgsl;
+cd ~/tmp/mesa;
 sed -i '40s+^$+#include "X11/Xlib.h"+' src/egl/main/egldisplay.h;
 sed -i 's/^import os$/import os, shutil\ndef link(src, dest):\n shutil.copyfile(src, dest)\ndef unlink(src):\n os.remove(src)\nos.link = link\nos.unlink = unlink/' bin/install_megadrivers.py;
 mkdir b;
