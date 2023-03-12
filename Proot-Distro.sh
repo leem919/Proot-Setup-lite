@@ -10,7 +10,8 @@ echo '#!/bin/bash
 xrdb $HOME/.Xresources
 xterm' > ~/.vnc/xstartup
 
-echo 'vncserver -name wine-proot -geometry 960x540 -localhost no :1' > /usr/local/bin/vnc-start
+echo 'vncserver -name wine-proot -geometry 960x540 -localhost no :1
+termux-open-url vnc://127.0.0.1:5901' > /usr/local/bin/vnc-start
 
 echo 'vncserver -kill :1' > /usr/local/bin/vnc-stop
 
