@@ -21,8 +21,8 @@ chmod +x Proot-Distro.sh &&
 
 # Install box86/box64
 
-wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box86-64_Wine86-64.sh && 
-chmod +x Box86-64_Wine86-64.sh && 
-./Box86-64_Wine86-64.sh
+wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box86_Wine86.sh && 
+chmod +x Box86_Wine86.sh && 
+./Box86_Wine86.sh
 
 echo "Restart Termux, and then run vnc-start to open the vnc server, and vnc-stop to close it. Once logged into vnc, run wine-desktop to start it up. If it fails, delete ~/.wine and try running gst wine-desktop instead."
