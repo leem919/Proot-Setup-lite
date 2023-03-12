@@ -21,7 +21,7 @@ chmod +x Proot-Distro.sh &&
 
 # Install box86/box64
 
-wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/cx-tesing/Box86_Wine86.sh && 
+wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/cx-testing/Box86_Wine86.sh && 
 chmod +x Box86_Wine86.sh && 
 ./Box86_Wine86.sh
 
