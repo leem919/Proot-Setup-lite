@@ -15,13 +15,13 @@ source ~/.bashrc
 
 # Install proot 
 
-wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Proot-Distro.sh &&
+wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/cx-testing/Proot-Distro.sh &&
 chmod +x Proot-Distro.sh &&
 ./Proot-Distro.sh
 
 # Install box86/box64
 
-wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box86_Wine86.sh && 
+wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/cx-tesing/Box86_Wine86.sh && 
 chmod +x Box86_Wine86.sh && 
 ./Box86_Wine86.sh
 
