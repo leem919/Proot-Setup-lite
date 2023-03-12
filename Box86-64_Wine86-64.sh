@@ -50,8 +50,8 @@ sudo apt update && sudo apt install box64-generic-arm -y
 cd
 mkdir ~/wine
 cd ~/wine
-wget https://www.playonlinux.com/wine/binaries/phoenicis/cx-linux-amd64/PlayOnLinux-winecx-18.1.0-cx-linux-amd64.tar.gz
-tar -xvf *.tar.gz
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/8.3/wine-8.3-amd64.tar.xz
+tar -xvf *.tar.xz
 mv ~/wine/wine*/* ~/wine
 rm -rf wine*
 cd
