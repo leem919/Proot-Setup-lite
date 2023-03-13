@@ -29,9 +29,15 @@ sudo rm -rf ~/wine
 
 # Install Box86
 
-sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list
-wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box86-debs-archive-keyring.gpg
-sudo apt update && sudo apt install box86-generic-arm -y
+cd
+apt install make cmake python3 git libc6:armhf libstdc++6:armhf gcc-arm-linux-gnueabihf -y
+git clone https://github.com/ptitSeb/box86
+cd box86; mkdir build; cd build
+cmake .. -DRPI4ARM64=1 -DARM_DYNAREC=ON -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
+make -j$(nproc)
+make install
+cd
+rm -rf box86
 
 # Wine-i386
 
