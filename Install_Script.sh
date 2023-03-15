@@ -15,14 +15,10 @@ source ~/.bashrc
 
 # Install proot 
 
-wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Proot-Distro.sh &&
-chmod +x Proot-Distro.sh &&
-./Proot-Distro.sh
+curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Proot-Distro.sh | bash
 
 # Install box86/box64
 
-wget https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box86-64_Wine86-64.sh && 
-chmod +x Box86-64_Wine86-64.sh && 
-./Box86-64_Wine86-64.sh
+curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box86-64_Wine86-64.sh | bash
 
 echo "Restart Termux, and then run vnc-start to open the vnc server, and vnc-stop to close it. Once logged into vnc, run wine-desktop to start it up. If it fails, delete ~/.wine and try running gst wine-desktop instead."
