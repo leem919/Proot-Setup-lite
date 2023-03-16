@@ -33,17 +33,22 @@ sudo apt clean
 sudo apt autoremove -y
 sudo rm -rf ~/wine
 
-# Install Box86
+# Install Box86 and Box64
 
-sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list
-wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box86-debs-archive-keyring.gpg
-sudo apt update && sudo apt install box86-generic-arm -y
-
-# Install Box64
-
-sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list
-wget -O- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box64-debs-archive-keyring.gpg
-sudo apt update && sudo apt install box64-generic-arm -y
+cd
+git clone https://github.com/ptitSeb/box86
+git clone https://github.com/ptitSeb/box64
+cd box86; mkdir build; cd build
+cmake .. -DRPI4ARM64=1 -DARM_DYNAREC=ON -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
+make -j$(nproc)
+make install
+cd
+cd box64; mkdir build; cd build
+cmake .. -DRPI4ARM64=1 -DARM_DYNAREC=ON -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
+make -j$(nproc)
+make install
+cd
+rm -rf box86 box64
 
 # Wine-amd64
 
@@ -62,5 +67,4 @@ sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
 sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64
 
 #Install kernel32.dll fix
-rm -rf ~/.wine
 echo 'alias gst="export WINEDLLOVERRIDES="winegstreamer=""""' >> ~/.bashrc
