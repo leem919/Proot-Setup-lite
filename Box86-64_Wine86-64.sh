@@ -8,7 +8,7 @@ sudo apt upgrade -y
 
 # Install related kits 
 
-sudo apt install -y gpg xz-utils 
+sudo apt install -y gpg xz-utils make cmake python3 git libc6:armhf libstdc++6:armhf gcc-arm-linux-gnueabihf
 
 # OpenGL
 
