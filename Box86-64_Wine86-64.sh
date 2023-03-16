@@ -63,4 +63,4 @@ sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64
 
 #Install kernel32.dll fix
 rm -rf ~/.wine
-echo 'alias gst="WINEDLLOVERRIDES="winegstreamer=""""' >> ~/.bashrc
+echo 'alias gst="export WINEDLLOVERRIDES="winegstreamer=""""' >> ~/.bashrc
