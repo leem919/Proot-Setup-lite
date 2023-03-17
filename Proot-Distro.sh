@@ -21,7 +21,6 @@ chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vnc-start
 chmod +x /usr/local/bin/vnc-stop
 chmod +x /usr/local/bin/wine-desktop
-chmod +x /usr/local/bin/wine-vnc
 
 echo "export DISPLAY=:1" >> /etc/profile
 echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile
