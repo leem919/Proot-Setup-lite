@@ -39,12 +39,12 @@ cd
 git clone https://github.com/ptitSeb/box86
 git clone https://github.com/ptitSeb/box64
 cd box86; mkdir build; cd build
-cmake .. -DRPI4ARM64=1 -DARM_DYNAREC=ON -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
+cmake .. -DARM64=1 -DBAD_SIGNAL=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 make -j$(nproc)
 make install
 cd
 cd box64; mkdir build; cd build
-cmake .. -DRPI4ARM64=1 -DARM_DYNAREC=ON -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
+cmake .. -DARM_DYNAREC=1 -DBAD_SIGNAL=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 make -j$(nproc)
 make install
 cd
