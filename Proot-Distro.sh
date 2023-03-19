@@ -17,7 +17,7 @@ echo 'vncserver -kill :1' > /usr/local/bin/vnc-stop
 
 echo 'box64 wine64 explorer /desktop=wine,1024x576 explorer' > /usr/local/bin/wine-desktop
 
-echo 'source /usr/local/bin/vnc-start; source /usr/local/bin/wine-desktop' > /usr/local/bin/wine-vnc
+echo 'source /usr/local/bin/vnc-start; source /usr/local/bin/wine-desktop; source /usr/local/bin/vnc-stop' > /usr/local/bin/wine-vnc
 
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vnc-start
