@@ -1,7 +1,5 @@
 pkg install x11-repo 
-curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/virglrenderer-android_0.10.4.deb -O
-dpkg -i virglrenderer-android_0.10.4.deb
-rm virglrenderer-android_0.10.4.deb
+pkg install virglrenderer-android
 
-echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android"' >> /data/data/com.termux/files/home/.bashrc
-echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3COMPAT GALLIUM_DRIVER=virpipe"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
+echo 'alias gl="MESA_NO_ERROR=1 MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"' >> /data/data/com.termux/files/home/.bashrc
+echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.4COMPAT GALLIUM_DRIVER=virpipe"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
