@@ -15,6 +15,6 @@ wiggle --replace src/egl/main/egldisplay.h src/egl/main/egldisplay.h.rej
 mkdir build
 cd build
 meson .. -Dprefix=/usr/local -Dplatforms=x11 -Dgbm=enabled -Ddri-drivers='' -Dgallium-drivers=zink,swrast -Dllvm=disabled -Dvulkan-drivers='' -Dcpp_rtti=false -Dc_args=-Wno-error=incompatible-pointer-types -Dbuildtype=release
-rm -rf $PREFIX/lib/libglapi.so* $PREFIX/lib/libGL.so*
+rm -rf /usr/local/lib/libglapi.so* /usr/local/lib/libGL.so*
 ninja install
 echo 'alias zink="GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy"' >> ~/.bashrc
