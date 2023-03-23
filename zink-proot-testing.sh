@@ -17,3 +17,4 @@ cd build
 LDFLAGS='-l:libandroid-shmem.a -llog' meson .. -Dprefix=$PREFIX -Dplatforms=x11 -Dgbm=enabled -Ddri-drivers='' -Dgallium-drivers=zink,swrast -Dllvm=enabled -Dvulkan-drivers='' -Dcpp_rtti=false -Dc_args=-Wno-error=incompatible-function-pointer-types -Dbuildtype=release
 rm -rf $PREFIX/lib/libglapi.so* $PREFIX/lib/libGL.so*
 ninja install
+echo 'alias zink="GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy"' >> ~/.bashrc
