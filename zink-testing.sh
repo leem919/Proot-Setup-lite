@@ -4,7 +4,7 @@ pip install meson mako;
 mkdir ~/tmp;
 cd ~/tmp;
 LD_PRELOAD='' git clone --depth 1 -b libxshmfence-1.3 https://gitlab.freedesktop.org/xorg/lib/libxshmfence.git;
-git clone https://github.com/Grima04/mesa-turnip-kgsl
+LD_PRELOAD='' git clone --depth 1 -b mesa-22.3.0 https://gitlab.freedesktop.org/mesa/mesa.git
 LD_PRELOAD='' git clone --depth 1 -b 1.5.10 https://github.com/anholt/libepoxy.git;
 curl https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/0.10.4/virglrenderer-0.10.4.zip -O
 unzip virglrenderer-0.10.4.zip
