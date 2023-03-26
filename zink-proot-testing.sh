@@ -5,6 +5,7 @@ apt update -y
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
 apt install -y software-properties-common dirmngr apt-transport-https wget git unzip libxcb-shm0 mesa-utils python3-pip software-properties-common dirmngr apt-transport-https python3-mako libxcb-shm0-dev libpciaccess-dev make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libxml2-dev graphviz doxygen xsltproc xmlto xutils-dev libxkbcommon-dev libvulkan1 mesa-vulkan-drivers
 apt build-dep mesa -y
+cp /usr/include/libdrm/* /usr/include
 mkdir ~/zpttmp
 cd ~/zpttmp
 git clone https://gitlab.freedesktop.org/glvnd/libglvnd
@@ -18,7 +19,7 @@ tar -xf libdrm-2.4.115.tar.xz
 cd libdrm-2.4.115
 mkdir build
 cd build
-meson setup --prefix=$XORG_PREFIX \
+meson setup --prefix=/usr/local \
             --buildtype=release   \
             -Dudev=true           \
             -Dvalgrind=disabled   \
