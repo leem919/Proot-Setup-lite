@@ -1,7 +1,10 @@
 #!/bin/bash
 
 apt update && apt upgrade -y
-apt-get install sudo nano wget xterm dbus-x11 tigervnc-standalone-server -y
+apt-get install sudo nano wget xterm dbus-x11 -y
+wget https://versaweb.dl.sourceforge.net/project/tigervnc/stable/1.13.1/ubuntu-22.04LTS/arm64/tigervncserver_1.13.1-1ubuntu1_arm64.deb
+dpkg -i tigervncserver_1.13.1-1ubuntu1_arm64.deb
+rm tigervncserver_1.13.1-1ubuntu1_arm64.deb
 
 apt clean && apt autoremove -y
 
