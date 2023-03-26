@@ -2,6 +2,7 @@ echo 'deb-src [signed-by="/usr/share/keyrings/ubuntu-archive-keyring.gpg"] http:
 deb-src [signed-by="/usr/share/keyrings/ubuntu-archive-keyring.gpg"] http://ports.ubuntu.com/ubuntu-ports jammy-updates main universe multiverse
 deb-src [signed-by="/usr/share/keyrings/ubuntu-archive-keyring.gpg"] http://ports.ubuntu.com/ubuntu-ports jammy-security main universe multiverse' >> /etc/apt/sources.list
 apt update -y
+DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
 apt install -y software-properties-common dirmngr apt-transport-https wget git unzip libxcb-shm0 mesa-utils python3-pip software-properties-common dirmngr apt-transport-https python3-mako libxcb-shm0-dev libpciaccess-dev make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libxml2-dev graphviz doxygen xsltproc xmlto xutils-dev libxkbcommon-dev libvulkan1 mesa-vulkan-drivers
 apt build-dep mesa -y
 mkdir ~/zpttmp
