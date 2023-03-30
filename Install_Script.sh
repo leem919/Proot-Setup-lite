@@ -26,7 +26,7 @@ curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Proot-Distr
 curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box86-64_Wine86-64.sh | bash
 
 echo "SCRIPT COMPLETE"
-echo "First restart Termux, and then run 'ubuntu' to login to the proot.
+echo "First restart Termux, and then run 'ubuntu' to log into the proot.
 Commands in proot:
 vnc-start: starts the vnc server
 vnc-stop: stops the vnc server
