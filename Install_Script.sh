@@ -25,5 +25,10 @@ curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Proot-Distr
 
 curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box86-64_Wine86-64.sh | bash
 
-echo "DONE"
-echo "Restart Termux, and then run ubuntu to login to the proot. In the proot, run vnc-start to open the vnc server, and vnc-stop to close it. Once logged into vnc, run wine-desktop to start it up. You can also run both at the same time using wine-vnc."
+echo "SCRIPT COMPLETE"
+echo "First restart Termux, and then run 'ubuntu' to login to the proot.
+Commands in proot:
+vnc-start: starts the vnc server
+vnc-stop: stops the vnc server
+wine-desktop: starts the wine desktop on display 1
+wine-vnc: starts the vnc server and then wine, the vnc server stops when wine is closed"
