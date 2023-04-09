@@ -2,6 +2,7 @@ echo 'deb-src [signed-by="/usr/share/keyrings/ubuntu-archive-keyring.gpg"] http:
 echo 'deb-src [signed-by="/usr/share/keyrings/ubuntu-archive-keyring.gpg"] http://ports.ubuntu.com/ubuntu-ports jammy-updates main universe multiverse' >> /etc/apt/sources.list
 echo 'deb-src [signed-by="/usr/share/keyrings/ubuntu-archive-keyring.gpg"] http://ports.ubuntu.com/ubuntu-ports jammy-security main universe multiverse' >> /etc/apt/sources.list
 apt update -y
+apt install wget git -y
 apt build-dep mesa -y
 cp /usr/include/libdrm/* /usr/include
 cd
