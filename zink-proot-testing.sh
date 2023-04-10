@@ -6,12 +6,12 @@ apt install wget git -y
 apt build-dep mesa -y
 cp /usr/include/libdrm/* /usr/include
 cd
-git clone https://github.com/Heasterian/mesa
+git clone https://github.com/Grima04/mesa-turnip-kgsl
 wget https://github.com/alexvorxx/Zink-Mesa-Xlib/archive/refs/tags/v0.0.2.zip
 unzip v0.0.2.zip
 rm v0.0.2.zip
-cd mesa
-meson build -D platforms=x11,wayland -D gallium-drivers=swrast,virgl,zink -D vulkan-drivers=freedreno -D dri3=enabled -D egl=enabled -D gles2=enabled -D glvnd=true -D glx=dri -D libunwind=disabled -D osmesa=true -D shared-glapi=enabled -D microsoft-clc=disabled -D valgrind=disabled --prefix /usr -D gles1=disabled -D freedreno-kgsl=true -Dbuildtype=release
+cd mesa-turnip-kgsl
+meson build -D platforms=x11,wayland -D gallium-drivers=swrast,virgl,zink -D vulkan-drivers=freedreno -D dri3=enabled  -D egl=enabled  -D gles2=enabled -D glvnd=true -D glx=dri  -D libunwind=disabled -D osmesa=true  -D shared-glapi=enabled -D microsoft-clc=disabled  -D valgrind=disabled --prefix /usr -D gles1=disabled -D freedreno-kgsl=true
 cd build
 ninja install
 cd
