@@ -19,4 +19,4 @@ cd Zink-Mesa-Xlib-0.0.2
 meson build -Dgallium-va=disabled -Dgallium-drivers=virgl,zink,swrast -Ddri3=disabled -Dvulkan-drivers= -Dglx=xlib -Dplatforms=x11 -Dbuildtype=release
 cd build
 ninja install
-echo 'export GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy ZINK_DEBUG=compact' >> ~/.bashrc
+echo 'export GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy ZINK_DEBUG=compact MESA_VK_WSI_DEBUG=sw MESA_GL_VERSION_OVERRIDE=3.1' >> ~/.bashrc
