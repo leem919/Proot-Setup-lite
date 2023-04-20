@@ -21,9 +21,9 @@ source ~/.shortcuts/login-ubuntu
 
 curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Proot-Distro.sh | bash
 
-# Install box86/box64
+# Install box64
 
-curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box86-64_Wine86-64.sh | bash
+curl https://raw.githubusercontent.com/leem919/Proot-Setup-lite/main/Box64_Wine64.sh | bash
 
 echo "SCRIPT COMPLETE"
 echo "First restart Termux, and then run 'ubuntu' to log into the proot.
