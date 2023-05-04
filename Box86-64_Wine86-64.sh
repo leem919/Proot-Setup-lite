@@ -55,7 +55,7 @@ rm -rf box86 box64
 cd
 mkdir ~/wine
 cd ~/wine
-wget https://github.com/Kron4ek/Wine-Builds/releases/download/8.6/wine-8.6-amd64.tar.xz
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/8.7/wine-8.7-amd64.tar.xz
 tar -xvf *.tar.xz
 mv ~/wine/wine*/* ~/wine
 rm -rf wine*
